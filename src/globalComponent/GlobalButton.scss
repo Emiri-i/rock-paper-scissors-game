@@ -1,0 +1,36 @@
+@import "../globalCss/global";
+.global-button-wrapper {
+  margin-top: 10px;
+  text-align: center;
+  button {
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid $globalButtonColor;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $globalButtonColor;
+      transform: translateX(-100%);
+      transition: 0.25s;
+      z-index: -1;
+    }
+    &:hover {
+      color: #ffffff;
+      background: none;
+    }
+    &:hover:before {
+      transform: translateX(0);
+    }
+  }
+}
