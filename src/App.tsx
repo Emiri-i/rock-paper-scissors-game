@@ -1,10 +1,14 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+import StartGame from "./component/StartGame";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([{ path: "/", element: <StartGame /> }]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <RouterProvider router={router} />
     </div>
   );
 }
