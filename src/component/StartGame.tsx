@@ -21,7 +21,7 @@ const StartGame = () => {
         </IconContext.Provider>
       </div>
       <div className="start-button-wrapper">
-        <GlobalButton text="START" />
+        <GlobalButton text="START" link="/playGame" />
       </div>
     </div>
   );
