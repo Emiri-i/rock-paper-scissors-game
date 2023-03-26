@@ -3,10 +3,12 @@ import "./App.scss";
 import StartGame from "./component/StartGame";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlayGame from "./component/PlayGame";
+import Error from "./Error";
 
 const router = createBrowserRouter([
   { path: "/", element: <StartGame /> },
   { path: "/playGame", element: <PlayGame /> },
+  { path: "*", element: <Error /> },
 ]);
 
 function App() {
