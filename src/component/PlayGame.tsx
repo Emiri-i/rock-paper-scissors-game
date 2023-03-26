@@ -95,13 +95,13 @@ const PlayGame = () => {
             className="choose-button paper"
             onClick={(e) => setHandSignal(e, handSignals[1].name)}>
             {handSignals[1].name}
-            <FaRegHandPeace size="1.1em" />
+            <FaRegHandPaper size="1.1em" />
           </button>
           <button
             className="choose-button scissors"
             onClick={(e) => setHandSignal(e, handSignals[2].name)}>
             {handSignals[2].name}
-            <FaRegHandPaper size="1.1em" />
+            <FaRegHandPeace size="1.1em" />
           </button>
         </div>
       )}
