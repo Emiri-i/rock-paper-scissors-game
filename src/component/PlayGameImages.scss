@@ -1,0 +1,64 @@
+@import "../globalCss/global";
+
+.play-game-page {
+  .play-game-img-wrapper {
+    height: 95px;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 0;
+      left: 163px;
+      transform: rotate(180deg);
+    }
+    .icon-rock {
+      color: $colorRock;
+    }
+    .icon-paper {
+      color: $colorPaper;
+    }
+    .icon-scissors {
+      color: $colorScissors;
+    }
+    &.notSelected {
+      svg {
+        opacity: 0;
+        animation: change-img-animation 0.9s infinite;
+      }
+      .icon-rock {
+        background-color: transparent;
+      }
+      .icon-paper {
+        animation-delay: 0.3s;
+      }
+      .icon-scissors {
+        animation-delay: 0.6s;
+      }
+    }
+    &.selected {
+      .icon-rock.non-active {
+        display: none;
+      }
+      .icon-paper.non-active {
+        display: none;
+      }
+      .icon-scissors.non-active {
+        display: none;
+      }
+    }
+
+    @keyframes change-img-animation {
+      0% {
+        opacity: 0;
+      }
+      33% {
+        opacity: 1;
+      }
+      66% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -8,11 +8,10 @@ import { FaRegHandPaper } from "react-icons/fa";
 const StartGame = () => {
   return (
     <div className="start-page">
-      <h1 className="start-page-title">Rock Paper Scissors</h1>
+      <h1 className="page-title">Rock Paper Scissors</h1>
       <div className="title-img-wrapper">
         <IconContext.Provider
           value={{
-            color: "gray",
             size: "100px",
           }}>
           <FaRegHandRock className="icon-rock" />

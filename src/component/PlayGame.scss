@@ -1,0 +1,103 @@
+@import "../globalCss/global";
+.play-game-page {
+  .player-name {
+    text-align: center;
+    color: #616161;
+  }
+  .you {
+    text-align: center;
+  }
+  hr {
+    width: 50%;
+    color: #616161;
+  }
+  .choose-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .choose-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > svg {
+        margin-left: 6px;
+      }
+      &.rock {
+        background-color: $colorRock;
+      }
+      &.paper {
+        background-color: $colorPaper;
+      }
+      &.scissors {
+        background-color: $colorScissors;
+      }
+    }
+    button {
+      margin-bottom: 10px;
+      width: 150px;
+      height: 40px;
+      font-size: 20px;
+      outline: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      /*hover effect*/
+      position: relative;
+      transition: 0.2s;
+      &:before {
+        content: "";
+        /*set position for the shining css*/
+        position: absolute;
+        top: 0;
+        left: -75%;
+        /*shining style*/
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        transform: skewX(-25deg);
+      }
+      &:hover::before {
+        animation: shine 0.7s;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @keyframes shine {
+        100% {
+          left: 125%;
+        }
+      }
+    }
+  }
+  .result-text {
+    text-align: center;
+    font-size: 50px;
+    animation: key1 2s ease 1;
+  }
+  @keyframes key1 {
+    0% {
+      opacity: 0;
+      transform: translateY(-90px);
+    }
+    40% {
+      opacity: 0.7;
+      transform: translateY(10px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+    80% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
