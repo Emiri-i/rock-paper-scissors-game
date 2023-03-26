@@ -28,6 +28,7 @@ const PlayGame = () => {
       targetElem?.classList.add(result);
     }
   }, [result]);
+
   const setHandSignal = (
     e: React.MouseEvent<HTMLButtonElement>,
     param: string
@@ -91,6 +92,7 @@ const PlayGame = () => {
     restart();
     countCtx.resetCount();
   };
+
   const restart = () => {
     setRandomHandSignal("");
     setSelectedHandSignal("");
@@ -107,7 +109,7 @@ const PlayGame = () => {
         randomHandSignal={randomHandSignal}
       />
       <hr />
-      <h4 className="player-name you">YOU</h4>
+      <h4 className="player-name">YOU</h4>
       {!selectedHandSignal && (
         <div className="choose-button-wrapper">
           <button
