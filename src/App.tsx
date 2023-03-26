@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.scss";
 import StartGame from "./component/StartGame";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import PlayGame from "./component/PlayGame";
 import Error from "./Error";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   { path: "/", element: <StartGame /> },
   { path: "/playGame", element: <PlayGame /> },
-  { path: "*", element: <Error /> },
+  { element: <Error /> },
 ]);
 
 function App() {
