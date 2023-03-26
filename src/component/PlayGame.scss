@@ -92,6 +92,19 @@
       color: #8e44ad;
     }
   }
+  .score {
+    text-align: center;
+    font-family: $fontCourier;
+    .result {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .score-each {
+      font-size: 20px;
+      margin-top: 2px;
+    }
+  }
   @keyframes key1 {
     0% {
       opacity: 0;

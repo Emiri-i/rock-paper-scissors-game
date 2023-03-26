@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 const QuitAndReturnButtons: React.FC<{
   showButton: boolean;
+  restart: () => void;
   resetData: () => void;
 }> = (props) => {
   useEffect(() => {
@@ -30,7 +31,7 @@ const QuitAndReturnButtons: React.FC<{
             text="Play Again"
             link="/playGame"
             className="footer-btn"
-            cb={props.resetData}
+            cb={props.restart}
           />
           <GlobalButton
             text="Quit"
