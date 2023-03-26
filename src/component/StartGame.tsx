@@ -12,7 +12,6 @@ const StartGame = () => {
       <div className="title-img-wrapper">
         <IconContext.Provider
           value={{
-            color: "gray",
             size: "100px",
           }}>
           <FaRegHandRock className="icon-rock" />
