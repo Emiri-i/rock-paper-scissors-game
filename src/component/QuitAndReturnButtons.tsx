@@ -23,6 +23,7 @@ const QuitAndReturnButtons: React.FC<{
       });
     }
   }, [props.showButton]);
+
   return (
     <>
       {props.showButton && (
