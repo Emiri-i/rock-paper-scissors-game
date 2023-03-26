@@ -13,6 +13,7 @@ const GlobalButton: React.FC<{
       props.cb();
     }
   };
+
   return (
     <div className="global-button-wrapper">
       {props.link && (

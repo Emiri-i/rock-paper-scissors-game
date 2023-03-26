@@ -2,10 +2,8 @@
 .play-game-page {
   .player-name {
     text-align: center;
+    margin: 10px 0;
     color: #616161;
-  }
-  .you {
-    text-align: center;
   }
   hr {
     width: 50%;
@@ -78,7 +76,32 @@
   .result-text {
     text-align: center;
     font-size: 50px;
+    font-family: $fontGillSans;
     animation: key1 2s ease 1;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    &.win {
+      color: #e67e22;
+    }
+    &.lose {
+      color: #34495e;
+    }
+    &.draw {
+      color: #8e44ad;
+    }
+  }
+  .score {
+    text-align: center;
+    font-family: $fontCourier;
+    .result {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .score-each {
+      font-size: 20px;
+      margin-top: 2px;
+    }
   }
   @keyframes key1 {
     0% {
