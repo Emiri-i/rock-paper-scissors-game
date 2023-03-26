@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./PlayGame.scss";
 import { useState } from "react";
 import PlayGameImages from "./PlayGameImages";
@@ -14,6 +14,12 @@ const PlayGame = () => {
   const [selectedHandSignal, setSelectedHandSignal] = useState("");
   const [result, setResult] = useState("");
 
+  useEffect(() => {
+    const targetElem = document.querySelector(".result-text");
+    if (targetElem) {
+      targetElem?.classList.add(result);
+    }
+  }, [result]);
   const setHandSignal = (
     e: React.MouseEvent<HTMLButtonElement>,
     param: string
