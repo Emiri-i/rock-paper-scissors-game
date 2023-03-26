@@ -8,7 +8,7 @@ import Error from "./Error";
 const router = createHashRouter([
   { path: "/", element: <StartGame /> },
   { path: "/playGame", element: <PlayGame /> },
-  { element: <Error /> },
+  { path: "*", element: <Error /> },
 ]);
 
 function App() {
