@@ -14,9 +14,9 @@ const StartGame = () => {
           value={{
             size: "100px",
           }}>
-          <FaRegHandRock className="icon-rock" />
-          <FaRegHandPaper className="icon-paper" />
-          <FaRegHandPeace className="icon-scissors" />
+          <FaRegHandRock role="start-page-icon" className="icon-rock" />
+          <FaRegHandPaper role="start-page-icon" className="icon-paper" />
+          <FaRegHandPeace role="start-page-icon" className="icon-scissors" />
         </IconContext.Provider>
       </div>
       <div className="start-button-wrapper">
