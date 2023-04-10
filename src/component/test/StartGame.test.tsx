@@ -12,8 +12,10 @@ describe("StartGame component test", () => {
       </MemoryRouter>
     );
   };
-  test("should renderes 3 icons and buttons", () => {
+  test("should render title, 3 icons, and buttons", () => {
     renderComponent();
+    const pageTitle = screen.getByRole("heading");
+    expect(pageTitle).toBeInTheDocument();
     const icons = screen.getAllByRole("start-page-icon");
     expect(icons).toHaveLength(3);
     const button = screen.getByRole("button");
