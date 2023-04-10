@@ -23,7 +23,7 @@ describe("StartGame component test", () => {
   test("should show a link to go to playGame component after clicking the start button", () => {
     const { container } = renderComponent();
     const linkWrapper = container.querySelector(".start-button-wrapper");
-    expect(linkWrapper?.firstElementChild.firstElementChild).toHaveAttribute(
+    expect(linkWrapper?.firstElementChild?.firstElementChild).toHaveAttribute(
       "href",
       "/playGame"
     );
